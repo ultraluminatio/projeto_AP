@@ -1,4 +1,4 @@
-module com.programandofodacci.aprendizado_linguages {
+module com.programandofodacci.aprendizado_linguagens {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
@@ -21,14 +21,12 @@ module com.programandofodacci.aprendizado_linguages {
     requires com.dlsc.pickerfx;
     requires com.dlsc.preferencesfx;
     
-    requires eu.hansolo.medusa;
     
     requires fr.brouillard.oss.cssfx;
     
     requires net.synedra.validatorfx;
     
     requires org.controlsfx.controls;
-    requires org.fxyz3d.core;
     requires org.fxmisc.richtext;
     requires org.fxmisc.undo;
     requires org.kordamp.bootstrapfx.core;

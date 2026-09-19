@@ -52,10 +52,7 @@
             <url>file://{project.basedir}/libs/preferencesfx-26.0.5.jar</url>
         </repository>
         
-        <repository>
-            <id>fxyz3d</id>
-            <url>file://{project.basedir}/libs/fxyz3d-0.6.0.jar</url>
-        </repository>
+
         
         <repository>
             <id>pdfviewfx</id>
@@ -105,11 +102,6 @@
         <repository>
             <id>keyboardfx</id>
             <url>file://{project.basedir}/libs/keyboardfx-1.1.0.jar</url>
-        </repository>
-        
-        <repository>
-            <id>medusa</id>
-            <url>file://{project.basedir}/libs/medusa-21.0.9.jar</url>
         </repository>
         
         <repository>
@@ -198,12 +190,6 @@
         </dependency>
         
         <dependency>
-            <groupId>org.fxyz3d</groupId>
-            <artifactId>fxyz3d</artifactId>
-            <version>0.6.0</version>
-        </dependency>
-        
-        <dependency>
             <groupId>com.dlsc.pdfviewfx</groupId>
             <artifactId>pdfviewfx</artifactId>
             <version>3.4.2</version>
@@ -258,12 +244,6 @@
         </dependency>
         
         <dependency>
-            <groupId>eu.hansolo</groupId>
-            <artifactId>medusa</artifactId>
-            <version>21.0.9</version>
-        </dependency>
-        
-        <dependency>
             <groupId>com.dlsc.pickerfx</groupId>
             <artifactId>pickerfx</artifactId>
             <version>1.3.1</version>
@@ -280,7 +260,6 @@
             <artifactId>view</artifactId>
             <version>12.1.0</version>
         </dependency>
-        
     </dependencies>
     <build>
         <plugins>
@@ -295,9 +274,9 @@
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.4</version>
+                <version>0.0.8</version>
                 <configuration>
-                    <mainClass>com.programandofodacci.aprendizado_linguages.App</mainClass>
+                    <mainClass>com.programandofodacci.aprendizado_linguagens.App</mainClass>
                 </configuration>
                 <executions>
                     <execution>
