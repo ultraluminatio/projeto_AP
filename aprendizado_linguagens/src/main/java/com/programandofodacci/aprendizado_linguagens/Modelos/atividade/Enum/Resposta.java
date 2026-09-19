@@ -22,6 +22,7 @@ public enum Resposta {
         if(id == 1) return Resposta.SOMATORIO;
         else if(id==2) return Resposta.CODIGO;
         else if(id==3) return Resposta.ESCOLHA;
+        else if(id==4) return Resposta.MULTIPLA_ESCOLHA;
         else throw new IllegalArgumentException("Enum invalido");
     }
     
