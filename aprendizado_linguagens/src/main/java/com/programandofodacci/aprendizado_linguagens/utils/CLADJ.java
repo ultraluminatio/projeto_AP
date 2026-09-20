@@ -3,8 +3,18 @@ package com.programandofodacci.aprendizado_linguagens.utils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
+
 /**
- *
+ * <h1><strong>Criação, Leitura, Alteração, Deletação de Json</strong></h1>
+ * <p>Essa classe tem como um objetivo de ler, alterar, criar e deletar Strings em formatos JSON</p>
+ * @version 0.0.1
+ * 
+ * @see Gson
+ * @see GsonBuilder
+ * @see JsonSyntaxException
+ * 
+ * 
+ * 
  * @author Ultra Luminatio 13
  */
 public class CLADJ {

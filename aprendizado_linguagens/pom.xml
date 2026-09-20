@@ -52,8 +52,6 @@
             <url>file://{project.basedir}/libs/preferencesfx-26.0.5.jar</url>
         </repository>
         
-
-        
         <repository>
             <id>pdfviewfx</id>
             <url>file://{project.basedir}/libs/pdfviewfx-3.4.2.jar</url>
@@ -119,6 +117,30 @@
             <url>file://{project.basedir}/libs/view-12.1.0.jar</url>
         </repository>
         
+        <repository>
+            <id>plantuml</id>
+            <url>file://{project.basedir}/libs/plantuml-1.2026.8.jar</url>
+        </repository>
+        
+        <repository>
+            <id>ikonli-core</id>
+            <url>file://{project.basedir}/libs/ikonli-core-12.4.0.jar</url>
+        </repository>
+        
+        <repository>
+            <id>ikonli-javafx</id>
+            <url>file://{project.basedir}/libs/ikonli-javafx-12.4.0.jar</url>
+        </repository>
+        
+        <repository>
+            <id>ikonli-materialdesign-pack</id>
+            <url>file://{project.basedir}/libs/ikonli-materialdesign-pack-12.4.0.jar</url>
+        </repository>
+        
+        <repository>
+            <id>poi-ooxml</id>
+            <url>file://{project.basedir}/libs/poi-ooxml-5.5.1.jar</url>
+        </repository>
     </repositories>
     
     <dependencies>
@@ -126,6 +148,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
             <version>${javafx.version}</version>
         </dependency>
         
@@ -259,6 +287,36 @@
             <groupId>com.calendarfx</groupId>
             <artifactId>view</artifactId>
             <version>12.1.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>net.sourceforge.plantuml</groupId>
+            <artifactId>plantuml</artifactId>
+            <version>1.2026.8</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-core</artifactId>
+            <version>12.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-javafx</artifactId>
+            <version>12.4.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.kordamp.ikonli</groupId>
+            <artifactId>ikonli-materialdesign-pack</artifactId>
+            <version>12.4.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.5.1</version>
         </dependency>
     </dependencies>
     <build>
