@@ -6,10 +6,12 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import jfxtras.fxml.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.programandofodacci.aprendizado_linguagens.controllers.MenuController">
     <stylesheets>
-        <URL value="@/com/programandofodacci/aprendizado_linguagens/estilos/menuEstilo.css"/>
+        <URL value="@../estilos/menuEstilo.css"/>
+        <GridPane hgap="8" vgap="6">
+             
+        </GridPane>
     </stylesheets>
 </AnchorPane>

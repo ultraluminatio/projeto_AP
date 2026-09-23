@@ -27,7 +27,7 @@ import java.util.List;
  * @author Ultra Luminatio 13
  */
 public class CLADAP {
-    public static String lerArquivosPequenos(String local){
+    public String lerArquivosPequenos(String local){
         String conteudo = "";
         try{
             List<String> linhas = Files.readAllLines(Paths.get(local));
@@ -40,7 +40,7 @@ public class CLADAP {
         }
         return conteudo;
     } 
-    public static String lerArquivosGrandes(String local){
+    public String lerArquivosGrandes(String local){
         String conteudo = "";
         try(BufferedReader br = new BufferedReader(new FileReader(local))) {
             String linha = br.readLine();
@@ -57,7 +57,7 @@ public class CLADAP {
         return conteudo;
     }
     
-    public static ArrayList<String> lerLinhasDeArquivosGrandes(String local){
+    public ArrayList<String> lerLinhasDeArquivosGrandes(String local){
         ArrayList<String> linhas = new ArrayList<>();
         try(BufferedReader br = new BufferedReader(new FileReader(local))) {
             String linha = br.readLine();
@@ -75,7 +75,7 @@ public class CLADAP {
         
         return null;
     }
-    public static ArrayList<String> lerLinhasDeArquivosPequenos(String local){
+    public ArrayList<String> lerLinhasDeArquivosPequenos(String local){
         ArrayList<String> linhas = new ArrayList<>();
         try{
             for(String linha: Files.readAllLines(Paths.get(local))){
@@ -89,7 +89,7 @@ public class CLADAP {
         return null;
     }
     
-    public static boolean criarArquivoPequeno(String local){
+    public boolean criarArquivoPequeno(String local){
         Path caminho = Paths.get(local);
         try{
             Files.createFile(caminho);
@@ -105,7 +105,7 @@ public class CLADAP {
         }
     }
     
-    public static boolean editarArquivoPequeno(String local, String conteudo){
+    public boolean editarArquivoPequeno(String local, String conteudo){
         Path caminho = Paths.get(local);
         try{
             Files.write(caminho, conteudo.getBytes());
@@ -121,7 +121,7 @@ public class CLADAP {
         }
     }
     
-    public static boolean editarArquivoPequeno(String local, String conteudo, StandardOpenOption configuracao){
+    public boolean editarArquivoPequeno(String local, String conteudo, StandardOpenOption configuracao){
         Path caminho = Paths.get(local);
         try{
             Files.write(caminho, conteudo.getBytes(), configuracao);
@@ -137,7 +137,7 @@ public class CLADAP {
         }
     }
     
-    public static boolean editarAqruivoGrande(String local, String conteudo){
+    public boolean editarAqruivoGrande(String local, String conteudo){
         try(BufferedWriter bw = Files.newBufferedWriter(Paths.get(local))){
             bw.write(conteudo);
             return true;
@@ -147,7 +147,7 @@ public class CLADAP {
             return false;
         }
     }
-    public static boolean editarAqruivoGrande(String local, String conteudo, StandardOpenOption configuracao){
+    public boolean editarAqruivoGrande(String local, String conteudo, StandardOpenOption configuracao){
         try(BufferedWriter bw = Files.newBufferedWriter(Paths.get(local), configuracao)){
             bw.write(conteudo);
             return true;
@@ -158,7 +158,7 @@ public class CLADAP {
         }
     }
     
-    public static boolean deletarArquivo(String local){
+    public boolean deletarArquivo(String local){
         try{
             Files.deleteIfExists(Paths.get(local));
             return true;

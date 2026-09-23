@@ -43,5 +43,6 @@ module com.programandofodacci.aprendizado_linguagens {
     requires org.testfx;
     
     opens com.programandofodacci.aprendizado_linguagens to javafx.fxml, jfxtras.fxml;
+    opens com.programandofodacci.aprendizado_linguagens.controllers to javafx.fxml;
     exports com.programandofodacci.aprendizado_linguagens;
 }

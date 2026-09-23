@@ -21,7 +21,7 @@ public class CLADJ {
     private static Gson gson;
     
     
-    public static <T extends Object> T getClasse(String json, Class<T> classe){
+    public <T extends Object> T getClasse(String json, Class<T> classe){
         try{
             gson = new GsonBuilder().create();
             T saida = new Gson().fromJson(json, classe);
@@ -35,7 +35,7 @@ public class CLADJ {
         return null;
     }
     
-    public static String toJson(Object objeto){
+    public String toJson(Object objeto){
         try{
             gson = new GsonBuilder().setPrettyPrinting().create();
             String saida = gson.toJson(objeto, objeto.getClass());
