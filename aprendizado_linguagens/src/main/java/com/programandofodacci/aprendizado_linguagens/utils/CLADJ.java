@@ -37,7 +37,10 @@ public class CLADJ {
     
     public String toJson(Object objeto){
         try{
-            gson = new GsonBuilder().setPrettyPrinting().create();
+            gson = new GsonBuilder().
+                    setPrettyPrinting().
+                    excludeFieldsWithoutExposeAnnotation().
+                    create();
             String saida = gson.toJson(objeto, objeto.getClass());
             
             gson = null;
@@ -48,5 +51,6 @@ public class CLADJ {
         }
         return null;
     }
+    
 }
    

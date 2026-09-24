@@ -1,22 +1,22 @@
 package com.programandofodacci.aprendizado_linguagens.Modelos;
 
+import com.google.gson.annotations.Expose;
 import java.io.Serializable;
-
+import com.google.gson.annotations.SerializedName;
 /**
  *
  * @author UltraLuminatio
  */
 public class Usuario implements Serializable{
-    private static final long serialVersionUID = 2L;
+    @Expose private static final long serialVersionUID = 2L;
     
-    private String nome;
-    private String email;
-    private double xp;
-    private String telefone;
-    private String data_nascimento;
+    @SerializedName(value = "nome_usuario") private String nome;
+    @SerializedName(value = "email_usuario") private String email;
+    @SerializedName(value = "xp_usuario") private double xp;
+    @SerializedName(value = "telefone_usuario") private String telefone;
+    @SerializedName(value = "aniversario_usuario") private String data_nascimento;
     
     //Construtores
-
     public Usuario(String nome, String email, String telefone, String data_nascimento) {
         this.nome = nome;
         this.email = email;

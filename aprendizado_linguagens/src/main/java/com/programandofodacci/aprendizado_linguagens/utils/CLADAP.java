@@ -89,7 +89,7 @@ public class CLADAP {
         return null;
     }
     
-    public boolean criarArquivoPequeno(String local){
+    public boolean criarArquivo(String local){
         Path caminho = Paths.get(local);
         try{
             Files.createFile(caminho);
@@ -167,5 +167,27 @@ public class CLADAP {
             //TODO: Adicionar uma classe para armazenar algumas exceptions
             return false;
         }
+    }
+    
+    public boolean verificarArquivo(String local){
+        Path caminho = Paths.get(local);
+        return Files.exists(caminho);
+    }
+    
+    public boolean criarDiretorio(String local){
+        Path caminho = Paths.get(local);
+        try{
+            Files.createDirectory(caminho);
+            return true;
+        }
+        catch(IOException e){
+            //TODO: Adicionar uma classe para armazenar algumas exceptions
+            return false;
+        }
+    }
+    
+    public boolean verificarDiretorio(String local){
+        Path caminho = Paths.get(local);
+        return Files.isDirectory(caminho);
     }
 }

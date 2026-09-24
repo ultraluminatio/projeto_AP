@@ -13,15 +13,27 @@ import javafx.scene.control.TextField;
  * @author UltraLuminatio
  */
 public class MenuController {
-    private static CLADJ cladj = new CLADJ();
+    private static CLADJ cladj;
     private static CLADAP cladap;
 
     @FXML private TextField tfNome;
     @FXML private TextField tfEmail;
     @FXML private TextField tfTelefone;
     
+    
+    @FXML
+    private void initialize(){
+        cladj = new CLADJ();
+        cladap = new CLADAP();
+    }
+    
     @FXML
     private void criarPerfil(){
-
+        
+    }
+    
+    @FXML
+    private void carregarPerfil(){
+        
     }
 }
