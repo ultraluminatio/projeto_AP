@@ -41,20 +41,19 @@ public class CLADAP {
         return conteudo;
     } 
     public String lerArquivosGrandes(String local){
-        String conteudo = "";
+        StringBuilder conteudo = new StringBuilder();
         try(BufferedReader br = new BufferedReader(new FileReader(local))) {
-            String linha = br.readLine();
-            conteudo += linha;
-            while(linha != null){
-                linha = br.readLine();
-                conteudo += linha + "";
+            String linha;
+            while((linha = br.readLine()) != null){
+                conteudo.append(linha);
             }
         } 
         catch (IOException e) {
             //TODO: Adicionar uma classe para armazenar algumas exceptions
+
         }
 
-        return conteudo;
+        return conteudo.toString();
     }
     
     public ArrayList<String> lerLinhasDeArquivosGrandes(String local){
@@ -137,7 +136,7 @@ public class CLADAP {
         }
     }
     
-    public boolean editarAqruivoGrande(String local, String conteudo){
+    public boolean editarArquivoGrande(String local, String conteudo){
         try(BufferedWriter bw = Files.newBufferedWriter(Paths.get(local))){
             bw.write(conteudo);
             return true;
@@ -147,7 +146,7 @@ public class CLADAP {
             return false;
         }
     }
-    public boolean editarAqruivoGrande(String local, String conteudo, StandardOpenOption configuracao){
+    public boolean editarArquivoGrande(String local, String conteudo, StandardOpenOption configuracao){
         try(BufferedWriter bw = Files.newBufferedWriter(Paths.get(local), configuracao)){
             bw.write(conteudo);
             return true;

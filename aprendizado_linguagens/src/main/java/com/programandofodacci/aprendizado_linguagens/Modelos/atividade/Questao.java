@@ -10,6 +10,14 @@ public abstract class Questao {
     private String enunciado;
     private Resposta resposta;
 
+    //Construtores
+    public Questao() {
+    }
+    public Questao(String enunciado, Resposta resposta) {
+        this.enunciado = enunciado;
+        this.resposta = resposta;
+    }
+    
     
     //Getters
     public String getEnunciado() {
@@ -27,5 +35,5 @@ public abstract class Questao {
         this.resposta = resposta;
     }
     
-    public abstract boolean confirmarEntrada();
+    public abstract boolean confirmarEntrada(String entrada);
 }

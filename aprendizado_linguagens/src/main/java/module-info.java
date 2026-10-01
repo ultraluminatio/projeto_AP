@@ -9,7 +9,10 @@ module com.programandofodacci.aprendizado_linguagens {
     requires java.sql;
     requires jfxtras.controls;
     requires javafx.web;
+    requires javafx.media;
+    requires javafx.swing;
     requires jfxtras.fxml;
+    requires java.desktop;
     
     requires atlantafx.base;
     
@@ -42,7 +45,8 @@ module com.programandofodacci.aprendizado_linguagens {
     requires org.slf4j;
     requires org.testfx;
     
-    opens com.programandofodacci.aprendizado_linguagens to javafx.fxml, jfxtras.fxml;
+    opens com.programandofodacci.aprendizado_linguagens to javafx.fxml, 
+            jfxtras.fxml, javafx.web, javafx.graphics;
     opens com.programandofodacci.aprendizado_linguagens.controllers to javafx.fxml;
     exports com.programandofodacci.aprendizado_linguagens;
 }
