@@ -19,6 +19,8 @@ module com.programandofodacci.aprendizado_linguagens {
     requires ch.qos.logback.classic;
     requires ch.qos.logback.core;
     requires com.calendarfx.view;
+    requires com.github.oshi;
+    requires com.github.weisj.jsvg;
     requires com.google.gson;
     requires com.google.zxing;
     requires com.dlsc.formsfx;
@@ -27,23 +29,43 @@ module com.programandofodacci.aprendizado_linguagens {
     requires com.dlsc.pdfviewfx;
     requires com.dlsc.pickerfx;
     requires com.dlsc.preferencesfx;
+    requires com.sun.jna;
+    requires com.sun.jna.platform;
     
     requires fr.brouillard.oss.cssfx;
     
+    requires jamepad;
+    
+    requires net.coobird.thumbnailator;
     requires net.synedra.validatorfx;
     
+    requires org.apache.logging.log4j;
+    requires org.apache.poi.ooxml;
+    requires org.apache.poi.poi;
+    requires org.apache.tika.core;
+    requires org.bouncycastle.pkix;
+    requires org.bouncycastle.provider;
+    requires org.bouncycastle.util;
     requires org.controlsfx.controls;
+    requires org.freedesktop.gstreamer;
     requires org.fxmisc.richtext;
     requires org.fxmisc.undo;
     requires org.kordamp.bootstrapfx.core;
     requires org.kordamp.desktoppanefx.core;
     requires org.kordamp.ikonli.core;
+    requires org.kordamp.ikonli.fontawesome;
     requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.ikonli.material;
     requires org.kordamp.ikonli.materialdesign;
-    requires org.apache.poi.poi;
     requires org.postgresql.jdbc;
     requires org.slf4j;
     requires org.testfx;
+    requires okhttp;
+    
+    requires tess4j;
+    
+    requires uk.co.caprica.vlcj;
+    requires usb4java;
     
     opens com.programandofodacci.aprendizado_linguagens to javafx.fxml, 
             jfxtras.fxml, javafx.web, javafx.graphics;
